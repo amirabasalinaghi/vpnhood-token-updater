@@ -24,3 +24,17 @@ wrangler login
 wrangler kv:namespace create "FARM_TOKENS"
 wrangler secret put API_TOKEN
 wrangler deploy
+```
+
+🔐 Security Model
+Method	Endpoint	Access
+GET	/farm-token.txt	Public
+POST	/farm-token.txt	Bearer Token (env.API_TOKEN)
+
+📥 VpnHood Configuration
+Field	Value
+Publish URL	https://vpnhood-token-updater.<user>.workers.dev/farm-token.txt
+Access Token	Your API token (e.g. wF9mX38UjPYr...)
+Auto Upload	POST
+Headers	Authorization: Bearer {access_token}
+Body	{farm_token}
