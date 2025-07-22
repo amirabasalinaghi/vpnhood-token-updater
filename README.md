@@ -27,14 +27,20 @@ wrangler deploy
 ```
 
 🔐 Security Model
-Method	Endpoint	Access
-GET	/farm-token.txt	Public
-POST	/farm-token.txt	Bearer Token (env.API_TOKEN)
+
+Method   | Endpoint           | Access
+---------|--------------------|------------------------------
+GET      | /farm-token.txt    | Public
+POST     | /farm-token.txt    | Bearer Token (env.API_TOKEN)
+
 
 📥 VpnHood Configuration
-Field	Value
-Publish URL	https://vpnhood-token-updater.<user>.workers.dev/farm-token.txt
-Access Token	Your API token (e.g. wF9mX38UjPYr...)
-Auto Upload	POST
-Headers	Authorization: Bearer {access_token}
-Body	{farm_token}
+
+Field           | Value
+----------------|--------------------------------------------------------------
+Publish URL     | https://vpnhood-token-updater.<user>.workers.dev/farm-token.txt
+Access Token    | Your API token (e.g. wF9mX38UjPYr2nDbLkq7RZc0AH6BsEvo)
+Auto Upload     | POST
+Headers         | Authorization: Bearer {access_token}
+Body            | {farm_token}
+
