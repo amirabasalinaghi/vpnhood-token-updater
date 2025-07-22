@@ -1,0 +1,13 @@
+
+---
+
+## 🧾 `wrangler.toml`
+
+```toml
+name = "vpnhood-token-updater"
+main = "src/index.js"
+compatibility_date = "2025-07-22"
+
+[[kv_namespaces]]
+binding = "FARM_TOKENS"
+id = "" # Will be filled by Wrangler
